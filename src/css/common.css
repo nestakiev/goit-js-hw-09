@@ -16,3 +16,23 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+/* Timer */
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6px;
+}
+
+.timer {
+  display: flex;
+  margin: -6px;
+}
+
+.value {
+  font-size: 30px;
+  line-height: 1.0;
+}
