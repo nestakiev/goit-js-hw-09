@@ -8,6 +8,7 @@ const refs = {
     hoursCount: document.querySelector('[data-hours]'),
     minutesCount: document.querySelector('[data-minutes]'),
     secondsCount: document.querySelector('[data-seconds]'),
+    input: document.querySelector('[id="datetime-picker"]'),
 }
 
 refs.btnStart.disabled = true;
@@ -36,7 +37,9 @@ flatpickr("#datetime-picker", options);
 refs.btnStart.addEventListener('click', onStartTimer);
 
 function onStartTimer() {    
-    intervalId = setInterval(currentTimerValue, 1000);    
+    intervalId = setInterval(currentTimerValue, 1000);
+    refs.btnStart.disabled = true;
+    refs.input.disabled = true;
 }
 
 function currentTimerValue () {    
